@@ -32,7 +32,7 @@ After having a more suitable set of data to work with. I started looking at the 
 I wanted to evaulate my distribution of my y_label. 
 
 Histogram of Patient Star Rating (1-5)
-![visual](y_hist_norm.png)
+![visual](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/visuals/y_hist_norm.png)
 
 I had an normal distribution for my y_label but I knew I had to upsample my target in order to perform a multiclass classification. 
 
@@ -41,28 +41,28 @@ I also had to pivot much of my data by metric id. This introduced a new problem 
 
 As you can see below there were many features that had very little fill rate. 
 
-![visual](msnoall.png)
+![visual](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/visuals/msnoall.png)
 I dropped features that had very little data by hospital. 
-![visual](msnodrop.png)
+![visual](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/visuals/msnodrop.png)
 
 There is obviously still large amounts of missing data. There wasn't any documentation to how the metric was collected to try to find meaning on why the metric was missing. The best way of imputing this data would be specific to each metric. By learning how each metric was calculated there may be a way to impudate the missing values in a statistically sound way. Unfortunately there wasn't time to research each metric to find the best way to fill the missing values. So I tried to consider the models that I would be running to replace the values with the most neutral value possible. Since there were no negative numbers in the metrics I filled each value as 0. I didn't want to fill the data with mean as that would reduce the variance of the data too much.
 
 After filling in the missing data I wanted to see if there was any correlation between my target and my features. As you can see below there was very weak corralation between my features and the target.
 
-![visual](corrplot.png)
+![visual](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/visuals/corrplot.png)
 
 ## Modeling
 
 I wanted to try a couple models for the multiclass classification. 
 The first thing needed was to upsample my lower classes. I used the SMOTE in iblearn. This was able to balance my classes. 
 
-![visual](upsample.png)
+![visual](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/visuals/upsample.png)
 
 The models I tried were Logistic Regression, Support Vector Classification and Random Forrest. The results did not give a good accuracy score. I had expected this from the EDA above. I didn't think there was a good connection between the way Hospitals quality metrics were created to how Patients rated their care. 
 I pulled the coefs from the Logistic Regression which had a test accuracy score of .41
 
 
-![visual](logregcoef.png)
+![visual](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/visuals/logregcoef.png)
 
 ## Conclusion
 
