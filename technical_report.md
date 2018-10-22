@@ -5,7 +5,6 @@ Medicare captures Patient Survey results and reports the by Hospital yearly sinc
 
 Medicare publishes annual reports on metrics as well as survey results by hospital. I will be combining separate reports of quality metrics that rate their ER time and effective care, infection rates, ownership type, inpatient psych care, average spend per patient, and outpatient imaging services per hospital.
 
-While effective health care 
 
 The data for these metrics will be taken from annual reports from https://data.medicare.gov/ for the past 4 years.
 
