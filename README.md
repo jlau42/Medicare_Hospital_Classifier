@@ -1,3 +1,6 @@
+Full Report - [technical_report.md](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/technical_report.md)
+Notebook - [Medicare.ipynb](https://github.com/jlau42/Medicare_Hospital_Classifier/blob/master/Medicare.ipynb)
+
 Do the way we evaluate Medicare hospitals have an effect on the way Patients perceived quality of care?
 Medicare captures Patient Survey results and reports the by Hospital yearly since 2014. 
 
